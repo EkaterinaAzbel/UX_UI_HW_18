@@ -1,0 +1,84 @@
+.mySkills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillBox {
+    flex: 0 0 calc(33.33% - 20px);
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background: linear-gradient(45deg, #fff, #ffffcc);
+}
+
+.skillBox:not(:last-child) {
+    margin-right: 20px;
+}
+
+.skillBox img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+} 
+.workGrid {
+    display: grid;
+  }
+  
+  /* Step 3: Apply named grid areas to the divs inside the grid container */
+  .project1 {
+    grid-area: project1;
+  }
+  
+  .project2 {
+    grid-area: project2;
+  }
+  
+  /* Step 4: Create grid-template-rows and grid-template-columns to match the design */
+  .workGrid {
+    grid-template-rows: repeat(2, 1fr); /* Two rows with equal height */
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  }
+  
+  /* Step 5: Build out grid-template-areas to match the design */
+  .workGrid {
+    grid-template-areas:
+      "project1 project2"
+      "project1 project2";
+  }
+  
+  /* Step 6: Apply CSS styles to your CSS Grid to match the visual design */
+  .workGrid div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: linear-gradient(135deg, #fffde7, #fff);
+  }
+  
+  .workGrid img {
+    max-width: 100%;
+  }
+  
+  .workGrid button {
+    background-color: #1ed324;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  /* Step 7: Style the h3 tag at the end */
+  .myWork h3 {
+    grid-column: 1 / -1; /* Span the full width of the grid container */
+    margin-top: 30px;
+  }  
