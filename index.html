@@ -55,3 +55,88 @@
     </section>
 </body>
 </html>
+<style>
+    .mySkills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillBox {
+    flex: 0 0 calc(33.33% - 5px);
+    padding: 5px;
+    border: 2px solid #060606;
+    text-align: center;
+    background: linear-gradient(45deg, #fff, #ffffcc);
+    width: fit-content;
+}
+
+.skillBox:not(:last-child) {
+    margin-right: 20px;
+}
+
+.skillBox img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+} 
+.workGrid {
+    display: grid;
+  }
+  .project1 {
+    grid-area: project1;
+  }
+  .project2 {
+    grid-area: project2;
+  }
+  .workGrid {
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .workGrid {
+    grid-template-areas:
+      "project1 project2"
+      "project1 project2";
+  }
+  .workGrid div {
+    border: 1px solid #070707;
+    padding: 10px;
+    background: linear-gradient(135deg, #fffde7, #fff);
+  }
+  
+  .workGrid img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  } 
+  .workGrid button {
+    background-color: #1ed324;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .myWork h3 {
+    grid-column: 1 / -1; 
+    margin-top: 30px;
+  }  
+  @media screen and (max-width: 600px) {
+    .workGrid {
+        display: grid;
+        grid-template-areas:
+            "skillBox"
+            "project1"
+            "project2";
+        grid-template-rows: repeat(2, 1fr); 
+        grid-template-columns: 1fr; 
+    }}
+</style>
